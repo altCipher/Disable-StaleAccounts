@@ -30,6 +30,7 @@
         [parameter(Mandatory=$false)]
         [String] $DeletePeriod
     )
+Import-Module ActiveDirectory
 Function Disable-Account
 {
 
@@ -38,4 +39,3 @@ Function Remove-Account
 {
 	
 }
-Import-Module ActiveDirectory

@@ -39,3 +39,7 @@ Function Remove-Account
 {
 	
 }
+# For-Each $OU Loop
+# Get-ADUser user list inactive > $InactivePeriod to UserList array
+# Disable Accounts
+# Delete Accounts

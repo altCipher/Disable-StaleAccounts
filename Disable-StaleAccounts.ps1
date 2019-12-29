@@ -38,3 +38,4 @@ Function Remove-Account
 {
 	
 }
+Import-Module ActiveDirectory

@@ -24,11 +24,13 @@
 	Param
 	(
     	[parameter(Mandatory=$true)]
-        [String] $Path,
+        [String] $InputFile,
         [parameter(Mandatory=$true)]
         [String] $InactivePeriod=30,
         [parameter(Mandatory=$false)]
-        [String] $DeletePeriod
+        [String] $DeletePeriod,
+        [parameter(Mandatory=$true)]
+        [String] $OutputFile="C:\scripts\altCipher\Disable-StaleAccounts\output\account-list_$Today"
     )
 Import-Module ActiveDirectory
 Function Disable-Account

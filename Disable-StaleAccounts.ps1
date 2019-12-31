@@ -43,12 +43,13 @@ Function Remove-Account
 }
 Write-Host $Inactive
 Write-Host $OutputFile
+
 [String[]]$OUList = Get-Content -Path $InputFile
 
 foreach ( $OU in $OUList) {
     Write-Host $OU
 }
-# For-Each $OU Loop
+
 # Get-ADUser user list inactive > $InactivePeriod to UserList array
 # Disable Accounts
 # Delete Accounts

@@ -25,14 +25,14 @@
 	(
     	[parameter(Mandatory=$true)]
         [String] $InputFile,
-        [parameter(Mandatory=$true)]
-        [String] $InactivePeriod=30,
         [parameter(Mandatory=$false)]
-        [String] $DeletePeriod,
-        [parameter(Mandatory=$true)]
-        [String] $OutputFile="C:\scripts\altCipher\Disable-StaleAccounts\output\account-list_$Today"
+        [String] $Inactive=30,
+        [parameter(Mandatory=$false)]
+        [String] $RemoveAfter,
+        [parameter(Mandatory=$false)]
+        [String] $OutputFile="C:\scripts\altCipher\Disable-StaleAccounts\output\account-list_$(get-date -f yyyy-MM-dd).txt"
     )
-Import-Module ActiveDirectory
+#Import-Module ActiveDirectory
 Function Disable-Account
 {
 
@@ -40,6 +40,13 @@ Function Disable-Account
 Function Remove-Account
 {
 	
+}
+Write-Host $Inactive
+Write-Host $OutputFile
+[String[]]$OUList = Get-Content -Path $InputFile
+
+foreach ( $OU in $OUList) {
+    Write-Host $OU
 }
 # For-Each $OU Loop
 # Get-ADUser user list inactive > $InactivePeriod to UserList array

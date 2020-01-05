@@ -30,7 +30,7 @@
         [parameter(Mandatory=$false)]
         [String] $RemoveAfter,
         [parameter(Mandatory=$false)]
-        [String] $OutputFile="C:\scripts\altCipher\Disable-StaleAccounts\output\account-list_$(get-date -f yyyy-MM-dd).txt"
+        [String] $OutputFile="C:\scripts\altCipher\Disable-StaleAccounts\output\account-list_$(get-date -f yyyy-MM-dd_HH:MM).txt"
     )
 #Import-Module ActiveDirectory
 Function Disable-Account

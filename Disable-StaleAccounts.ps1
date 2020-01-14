@@ -47,6 +47,7 @@ Write-Host $OutputFile
 [String[]]$OUList = Get-Content -Path $InputFile
 
 foreach ( $OU in $OUList) {
+    
     Write-Host $OU
 }
 
